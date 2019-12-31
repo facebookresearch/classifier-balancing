@@ -1,0 +1,38 @@
+coslr: true
+criterions:
+  PerformanceLoss:
+    def_file: ./loss/SoftmaxLoss.py
+    loss_params: {}
+    optim_params: null
+    weight: 1.0
+endlr: 0.0
+last: false
+memory: {centroids: false, init_centroids: false}
+model_dir: ./logs/Places_LT/models/dir
+networks:
+  classifier:
+    def_file: ./models/TauNormClassifier.py
+    optim_params: {lr: 0.1, momentum: 0.9, weight_decay: 0.0005}
+    params: {dataset: Places_LT, feat_dim: 2048, num_classes: 365, stage1_weights: false}
+  feat_model:
+    def_file: ./models/ResNet152Feature.py
+    fix: true
+    optim_params: {lr: 0.01, momentum: 0.9, weight_decay: 0.0005}
+    params: {dataset: Places_LT, dropout: null, stage1_weights: false,
+      use_fc: false, use_selfatt: false}
+shuffle: true
+training_opt:
+  batch_size: 256
+  dataset: Places_LT
+  display_step: 10
+  feature_dim: 2048
+  log_dir: ./logs/Places_LT/clslearn/lws_uni2ban
+  log_root: ./logs/Places_LT
+  num_classes: 365
+  num_epochs: 5
+  num_workers: 4
+  open_threshold: 0.1
+  sampler: {def_file: ./data/ClassAwareSampler.py, num_samples_cls: 4, type: ClassAwareSampler}
+  scheduler_params: {gamma: 0.1, step_size: 30}
+  stage: lws_uni2ban
+  sub_dir: clslearn

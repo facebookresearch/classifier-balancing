@@ -1,0 +1,40 @@
+coslr: true
+criterions:
+  PerformanceLoss:
+    def_file: ./loss/SoftmaxLoss.py
+    loss_params: {}
+    optim_params: null
+    weight: 1.0
+endlr: 0.0
+last: false
+memory: {centroids: false, init_centroids: false}
+model_dir: null
+networks:
+  classifier:
+    def_file: ./models/DotProductClassifier.py
+    optim_params: {lr: 0.2, momentum: 0.9, weight_decay: 0.0005}
+    params: {dataset: ImageNet_LT, feat_dim: 2048, log_dir: ./logs/ImageNet_LT/models/resnext50_banlance_e90,
+      num_classes: 1000, stage1_weights: false}
+  feat_model:
+    def_file: ./models/ResNext50Feature.py
+    fix: false
+    optim_params: {lr: 0.2, momentum: 0.9, weight_decay: 0.0005}
+    params: {dataset: ImageNet_LT, dropout: null, log_dir: ./logs/ImageNet_LT/models/resnext50_banlance_e90,
+      stage1_weights: false, use_fc: false, use_selfatt: false}
+shuffle: true
+training_opt:
+  backbone: resnext50
+  batch_size: 512
+  dataset: ImageNet_LT
+  display_step: 10
+  feature_dim: 2048
+  log_dir: ./logs/ImageNet_LT/models/resnext50_banlance_e90
+  log_root: ./logs/ImageNet_LT
+  num_classes: 1000
+  num_epochs: 90
+  num_workers: 12
+  open_threshold: 0.1
+  sampler: {def_file: ./data/ClassAwareSampler.py, num_samples_cls: 4, type: ClassAwareSampler}
+  scheduler_params: {gamma: 0.1, step_size: 30}
+  stage: resnext50_banlance_e90
+  sub_dir: models
