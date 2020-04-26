@@ -5,8 +5,8 @@ This repository contains code for the paper:
 [Bingyi Kang](https://scholar.google.com.sg/citations?user=NmHgX-wAAAAJ&hl=en), [Saining Xie](http://vcl.ucsd.edu/~sxie),[Marcus Rohrbach](https://rohrbach.vision/), [Zhicheng Yan](https://sites.google.com/view/zhicheng-yan), [Albert Gordo](https://agordo.github.io/), [Jiashi Feng](https://sites.google.com/site/jshfeng/), [Yannis Kalantidis](http://www.skamalas.com/)  
 [[OpenReview](https://openreview.net/forum?id=r1gRTCVFvB)]
 [[Arxiv](https://arxiv.org/abs/1910.09217)]
-[[PDF](https://arxiv.org/pdf/1910.09217.pdf)]  
-[[Slides](https://docs.google.com/presentation/d/1ALgcp2RBaC7T9Pbgh4qciZ2gFSc_yV_ajfV78RCjLhs/edit?usp=sharing)]
+[[PDF](https://arxiv.org/pdf/1910.09217.pdf)]
+[[Slides](https://docs.google.com/presentation/d/1ALgcp2RBaC7T9Pbgh4qciZ2gFSc_yV_ajfV78RCjLhs/edit?usp=sharing)]  
 Facebook AI Research, National University of Singapore  
 _International Conference on Learning Representations (ICLR), 2020_
 
