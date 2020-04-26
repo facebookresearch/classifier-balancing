@@ -6,6 +6,7 @@ This repository contains code for the paper:
 [[OpenReview](https://openreview.net/forum?id=r1gRTCVFvB)]
 [[Arxiv](https://arxiv.org/abs/1910.09217)]
 [[PDF](https://arxiv.org/pdf/1910.09217.pdf)]  
+[[Slides](https://docs.google.com/presentation/d/1ALgcp2RBaC7T9Pbgh4qciZ2gFSc_yV_ajfV78RCjLhs/edit?usp=sharing)]
 Facebook AI Research, National University of Singapore  
 _International Conference on Learning Representations (ICLR), 2020_
 
